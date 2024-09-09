@@ -3,7 +3,8 @@ import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { BellIcon, MountainIcon, SearchIcon } from "lucide-react"
+import { BellIcon,  SearchIcon } from "lucide-react"
+
 
 export default function Header() {
   return (
