@@ -1,10 +1,14 @@
+'use client'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import React from 'react'
 
 const RootHomePage = () => {
+  const router = useRouter();
+  const pathname = usePathname()
   return (
     <div className='py-[70px]'>
       <div className="flex min-h-[100dvh] flex-col">
@@ -20,7 +24,9 @@ const RootHomePage = () => {
                 elevate your living space.
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center md:justify-start">
-                <Button variant={'default'} className="bg-primary-foreground text-primary hover:bg-primary/90">
+                <Button
+                 onClick={() => router.push('/home')}
+                 variant={'default'} className="bg-primary-foreground text-primary hover:text-white hover:bg-primary/90">
                   Shop Now
                 </Button>
                 <Button variant="outline" className="text-primary-foreground">
@@ -56,7 +62,8 @@ const RootHomePage = () => {
                 <Button variant="link">Shop Now</Button>
               </div>
             </div>
-            <div className="group rounded-xl bg-muted p-6 transition-all hover:bg-accent hover:text-accent-foreground">
+            <div className="group rounded-xl bg-muted p-6 transition-all hover:bg-accent hover:text-accent-foreground
+            ">
               <img
                 src="/phone/apple14pro.png"
                 width="300"

@@ -2,9 +2,9 @@
 
 const page = () => {
   return (
-    <div>
-      sssaaaaaa
-    </div>
+    <section className="py-16 flex">
+      aaaaaaaaaaaaaa
+    </section>
   )
 }
 

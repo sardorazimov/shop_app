@@ -1,3 +1,4 @@
+import Sidebar from "@/components/Headers/sidebar"
 
 
 const SiteLayout = ({
@@ -7,8 +8,11 @@ const SiteLayout = ({
 }
 ) => {
   return (
-    <main>
-      {children}
+    <main className="">
+      <div className="flex">
+        <Sidebar />
+        {children}
+      </div>
     </main>
   )
 }

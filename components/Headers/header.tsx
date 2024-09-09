@@ -14,7 +14,7 @@ export default function Header() {
           <span className="font-bold text-lg">Shop Inc</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+          <Link href="/" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Home
           </Link>
           <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
