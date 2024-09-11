@@ -1,102 +1,75 @@
 'use client'
 
 
-import { Home, Laptop, School } from "lucide-react";
+import { BadgeDollarSign, Home, Laptop, Phone, School, Settings, ShoppingBag, Tag, Users } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation"
 import { useState } from "react";
 import { GiElectric } from "react-icons/gi";
+import Mobilesidebar from "./mobilesidebar";
 
-const Sidebar = () => {
+interface SidebarProps {
+
+}
+const Sidebar = ({
+
+}:SidebarProps) => {
   const currentPath = usePathname()
-  const [toggle, setToggle] = useState(false)
+  const pathname = usePathname() //
   return (
-    <section className="lg:flex hidden overflow-scroll">
-      <div className='py-16 border-r h-screen  lg:w-52'>
-        <div className=' '>
-          <h1 className="font-semibold text-3xl  text-center mt-2
-        text-transparent bg-gradient-to-b from-blue-700
-        to-rose-800  bg-clip-text backdrop-blur-lg">Shop App</h1>
+    <section className="lg:flex py-16">
+      <aside className="w-52   border-r hidden md:block">
+        <div className="flex items-center justify-between p-4 border-b">
+          <span className="text-xl font-bold">E-Shop</span>
+          <ShoppingBag className="h-6 w-6" />
         </div>
-        <div className="lg:flex flex-col mt-10 ">
-          <nav className="flex-col flex gap-4">
-            <div className="w-full flex flex-col ">
-              <div className="flex cursor-pointer  ">
-                <Link href={'/test'}
-                  className={currentPath === "/test" ? "text-green-500 font-semibold  px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full" :
-                    "text-slate-900 text-xl font-medium px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full"}>
-                  <Laptop />
-                  Electronik
-                </Link>
+        <nav className="p-4 lg:flex hidden">
+          <ul className="space-y-2">
+            <li className="flex  gap-4 w-full ">
+              <div className="flex flex-col">
+               <div className="flex gap-2">
+                <Link href={'/home/welcome'} className={currentPath === "/page-one" ? "text-green-500 font-semibold " : "flex font-medium gap-1 text-slate-600"}>
+                 <Laptop  className="text-blue-600"/> Welcome
+               </Link> 
+                </div>
+               <div className="flex gap-2">
+                <Link href={'/'} className={currentPath === "/page-one" ? "text-green-500 font-semibold " : "flex font-medium gap-1 text-slate-600"}>
+                 <BadgeDollarSign /> Welcome
+               </Link> 
+                </div>
+               <div className="flex gap-2">
+                <Link href={'/'} className={currentPath === "/page-one" ? "text-green-500 font-semibold " : "flex font-medium gap-1 text-slate-600"}>
+                 <Phone /> Welcome
+               </Link> 
+                </div>
+               <div className="flex gap-2">
+                <Link href={'/'} className={currentPath === "/page-one" ? "text-green-500 font-semibold " : "flex font-medium gap-1 text-slate-600"}>
+                 <Laptop /> Welcome
+               </Link> 
+                </div>
+               <div className="flex gap-2">
+                <Link href={'/'} className={currentPath === "/page-one" ? "text-green-500 font-semibold " : "flex font-medium gap-1 text-slate-600"}>
+                 <Laptop /> Welcome
+               </Link> 
+                </div>
+               <div className="flex gap-2">
+                <Link href={'/'} className={currentPath === "/page-one" ? "text-green-500 font-semibold " : "flex font-medium gap-1 text-slate-600"}>
+                 <Laptop /> Welcome
+               </Link> 
+                </div>
+               <div className="flex gap-2">
+                <Link href={'/'} className={currentPath === "/page-one" ? "text-green-500 font-semibold " : "flex font-medium gap-1 text-slate-600"}>
+                 <Laptop /> Welcome
+               </Link> 
+                </div>
               </div>
-              <div className="flex">
-                <Link href={'/page-two'}
-                  className={currentPath === "/page-two" ? " px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full text-green-500 font-semibold" :
-                    "text-slate-900 text-xl font-medium px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full"}>
-                  <Home />
-                  Home
-                </Link>
-              </div>
-              <div className="flex">
-                <Link href={'/page-three'}
-                  className={currentPath === "/page-three" ? " px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full text-green-500 font-semibold" :
-                    "text-slate-900 text-xl font-medium px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full"}>
-                  <School />
-                  Travel
-                </Link>
-              </div>
-              <div className="flex cursor-pointer  ">
-                <Link href={'/test'}
-                  className={currentPath === "/test" ? " px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full text-green-500 font-semibold" :
-                    "text-slate-900 text-xl font-medium px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full"}>
-                  <Laptop />
-                  Electronik
-                </Link>
-              </div>
-              <div className="flex">
-                <Link href={'/page-two'}
-                  className={currentPath === "/page-two" ? " px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full text-green-500 font-semibold" :
-                    "text-slate-900 text-xl font-medium px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full"}>
-                  <Home />
-                  Home
-                </Link>
-              </div>
-              <div className="flex">
-                <Link href={'/page-three'}
-                  className={currentPath === "/page-three" ? " px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full text-green-500 font-semibold " :
-                    "text-slate-900 text-xl font-medium px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full"}>
-                  <School />
-                  Travel
-                </Link>
-              </div>
-              <div className="flex cursor-pointer  ">
-                <Link href={'/test'}
-                  className={currentPath === "/test" ? " px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full text-green-500 font-semibold" :
-                    "text-slate-900 text-xl font-medium px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full"}>
-                  <Laptop />
-                  Electronik
-                </Link>
-              </div>
-              <div className="flex">
-                <Link href={'/page-two'}
-                  className={currentPath === "/page-two" ? " px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full text-green-500 font-semibold" :
-                    "text-slate-900 text-xl font-medium px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full"}>
-                  <Home />
-                  Home
-                </Link>
-              </div>
-              <div className="flex">
-                <Link href={'/page-three'}
-                  className={currentPath === "/page-three" ? "px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full text-green-500 font-semibold" :
-                    "text-slate-900 text-xl font-medium px-5 flex gap-1 items-center text-center cursor-pointer hover:bg-muted rounded-lg w-full"}>
-                  <School />
-                  Travel
-                </Link>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <>
+        <Mobilesidebar />
+       </>
     </section>
 
   )

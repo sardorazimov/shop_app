@@ -9,10 +9,7 @@ const SiteLayout = ({
 ) => {
   return (
     <main className="">
-      <div className="flex">
-        <Sidebar />
         {children}
-      </div>
     </main>
   )
 }

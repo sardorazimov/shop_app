@@ -2,8 +2,8 @@
 
 const page = () => {
   return (
-    <section className="py-16 flex">
-      aaaaaaaaaaaaaa
+    <section className="py-20">
+        Welcome Product Page
     </section>
   )
 }

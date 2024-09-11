@@ -2,8 +2,8 @@
 
 const Mobilesidebar = () => {
   return (
-    <div>
-      
+    <div className="lg:hidden flex">
+      mobile
     </div>
   )
 }
