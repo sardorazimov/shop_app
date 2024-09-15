@@ -9,7 +9,7 @@ const Homelayout = ({
 }) => {
   return (
     <main className="">
-      <div className="fixed lg:w-52"><Sidebar /></div>
+      <div className=""></div>
       {children}
     </main>
   )
